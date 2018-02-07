@@ -1,0 +1,28 @@
+.board {
+
+}
+
+.row {
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.row div {
+  flex: 1;
+  border: 1px solid black;
+  min-width: 200px;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row div:hover {
+  background-color: green;
+}
+
+#one {
+  background-color: blue;
+}
