@@ -3,6 +3,27 @@ import Header from './Header.js'
 import logo from './logo.svg';
 import './App.css';
 
+
+
+function findWin(board) {
+  // all possible winning solutions
+  var winningCombos = [
+    [1,2,3],[4,5,6],[7,8,9],[1,4,7],[2,5,8],[3,6,9],[0,4,9],[3,5,7]
+  ]
+
+  // if every index of a winning solution belongs to one playerl they win
+for(let i = 0; i < winningCombos.length; i++){
+
+}
+
+
+  //if(board[])
+
+  return
+    alert("You are the winner!")
+}
+
+
 class App extends Component {
   // use state to track the number of clicks
   constructor(props){
@@ -14,26 +35,30 @@ class App extends Component {
   }
 
   listItem = (e) => {
-    // update click counter
     var player
-    var newGameBoard = this.state.gameBoard
+    const newGameBoard = this.state.gameBoard
+    // var newGameBoard = this.state.gameBoard
+
+    // use a counter to decide odd or even for "X" or "O"
     var count = this.state.counter + 1
     this.setState({counter: count})
-    console.log(this.state);
-    if(count%2 == 0) {
-      player = "X"
-  }
-      else {
-      player = "0"
-  }
-    newGameBoard[e.target.id] = player
-    this.setState({gameBoard: newGameBoard})
-    // use that counter to decide odd or even for "X" or "O"
-  }
-
-
 
     // Make the square that was clicked show the correct mark
+    // console.log(this.state);
+
+
+    if(count%2==0) {
+      player = "X"
+    } else {
+      player = "0"
+    }
+
+    newGameBoard[e.target.id] = player
+    this.setState({gameBoard: newGameBoard})
+
+    findWin(newGameBoard)
+
+  }
 
   render() {
     return (
@@ -60,5 +85,6 @@ class App extends Component {
     );
   }
 }
+
 
 export default App;

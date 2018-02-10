@@ -2,7 +2,12 @@
    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3232), color-stop(16%,#fcf528), color-stop(32%,#28fc28), color-stop(50%,#28fcf8), color-stop(66%,#272ef9), color-stop(82%,#ff28fb), color-stop(100%,#ff3232));
 }
 
+.square{
+  font-size: 70px;
+  font-family: fantasy;
+  color: black;
 
+}
 
 .row {
   max-width: 1000px;
